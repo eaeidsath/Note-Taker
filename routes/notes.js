@@ -1,6 +1,7 @@
 const notes = require('express').Router();
 const { v4: uuidv4 } = require('uuid');
-const { readAndAppend, readFromFile } = require('../helpers/fsUtils');
+const fs = require('fs');
+const { readAndAppend, readFromFile, writeToFile } = require('../helpers/fsUtils');
 
 // get route to retrieve notes from db.json
 notes.get('/', (req, res) =>
@@ -19,7 +20,7 @@ notes.post('/', (req, res) => {
         title,
         text,
         // this function gives a unique id to each note
-        note_id: uuidv4(),
+        id: uuidv4(),
       };
   
       readAndAppend(newNote, './db/db.json');
@@ -35,9 +36,20 @@ notes.post('/', (req, res) => {
     }
 });
 
-notes.delete("/:id", (req, res) => {
-    if (req.params.id) {
-
+notes.delete("/:id", async (req, res) => {
+    try {
+      fs.readFile('./db/db.json', 'utf8', (err, data) => {
+        const db = JSON.parse(data);
+        const index = db.findIndex((notes) =>
+        notes.id === req.params.id
+        );
+        db.splice(index, 1);
+        writeToFile('./db/db.json', db);
+        })
+        location.reload();
+        res.status(200).json({status: 'success'});
+    } catch (err) {
+        res.status(500).json(err);
     }
 });
 
