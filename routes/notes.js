@@ -36,6 +36,7 @@ notes.post('/', (req, res) => {
     }
 });
 
+// delete route that spliced the selected note from the json array
 notes.delete("/:id", async (req, res) => {
     try {
       fs.readFile('./db/db.json', 'utf8', (err, data) => {

@@ -30,7 +30,7 @@ To run the server locally, install the latest version of NodeJS. Download this r
 
 To use the deployed version, enter https://note-taker-vtt5.onrender.com/ into your browser.
 
-To run the server locally, downloading this repo onto your local computer, navigate to these files using your terminal. Run 'npm start' to start the server.
+To run the server locally, download this repo onto your local computer and navigate to these files using your terminal. Run 'npm start' to start the server.
 Open http://localhost:3001/ in your browser to see the home page. Click the "Get Started" button or navigate to http://localhost:3001/notes to start taking notes.
 
 To use the note taker, enter text into the "Note Title" and "Note Text" fields, then click the "Save Note" button on the top right of the screen. While writing a note, click the "Clear Form" button to clear the contents of the title and text.
