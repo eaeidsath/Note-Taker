@@ -22,13 +22,18 @@ Making the back-end of this application helped me become much more familiar with
     
 ## Installation
 
-Install the latest version of NodeJS. Download this repo onto your local computer. Navigate to the file directory and run "npm i" to install the necessary packages.   
+You can use the deployed application by entering the url https://note-taker-vtt5.onrender.com/ into your browser without any additional installation.
+
+To run the server locally, install the latest version of NodeJS. Download this repo onto your local computer. Navigate to the file directory and run "npm i" to install the necessary packages.   
     
 ## Usage
-    
-After downloading this repo onto your local computer, navigate to these files using your terminal. Run 'npm start' to start the server.
+
+To use the deployed version, enter https://note-taker-vtt5.onrender.com/ into your browser.
+
+To run the server locally, downloading this repo onto your local computer, navigate to these files using your terminal. Run 'npm start' to start the server.
 Open http://localhost:3001/ in your browser to see the home page. Click the "Get Started" button or navigate to http://localhost:3001/notes to start taking notes.
-Enter text into the "Note Title" and "Note Text" fields, then click the "Save Note" button on the top right of the screen. While writing a note, click the "Clear Form" button to clear the contents of the title and text.
+
+To use the note taker, enter text into the "Note Title" and "Note Text" fields, then click the "Save Note" button on the top right of the screen. While writing a note, click the "Clear Form" button to clear the contents of the title and text.
 After saving, the title of your note will appear on the left side bar. Click the title to see the note content displayed.
 To delete a note, click the red trash icon next to the note you want to delete.
 
